@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>正则笔记 - Willow&#39;s Blogs</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="正则组成元素：字符和元字符单字符
+
+
+特殊字符
+正则表达式
+记忆方式
+
+
+
+换行符
+\n
+new line
+
+
+换页符
+\f
+form feed
+
+
+回车符
+\r
+return
+
+
+空白符
+\s
+s,"> 
+    <meta name="author" content="Willow Ramirez"> 
+    <link rel="alternative" href="atom.xml" title="Willow&#39;s Blogs" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Willow&#39;s Blogs</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://willowramirez.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">正则笔记</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">正则笔记</h1>
+        <div class="stuff">
+            <span>六月 01, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="正则组成元素：字符和元字符"><a href="#正则组成元素：字符和元字符" class="headerlink" title="正则组成元素：字符和元字符"></a>正则组成元素：字符和元字符</h2><h2 id="单字符"><a href="#单字符" class="headerlink" title="单字符"></a>单字符</h2><table>
+<thead>
+<tr>
+<th>特殊字符</th>
+<th align="center">正则表达式</th>
+<th>记忆方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>换行符</td>
+<td align="center">\n</td>
+<td><strong>n</strong>ew line</td>
+</tr>
+<tr>
+<td>换页符</td>
+<td align="center">\f</td>
+<td><strong>f</strong>orm feed</td>
+</tr>
+<tr>
+<td>回车符</td>
+<td align="center">\r</td>
+<td><strong>r</strong>eturn</td>
+</tr>
+<tr>
+<td>空白符</td>
+<td align="center">\s</td>
+<td><strong>s</strong>pace</td>
+</tr>
+<tr>
+<td>制表符</td>
+<td align="center">\t</td>
+<td><strong>t</strong>ab</td>
+</tr>
+<tr>
+<td>垂直制表符</td>
+<td align="center">\v</td>
+<td><strong>v</strong>ertical tab</td>
+</tr>
+<tr>
+<td>回退符</td>
+<td align="center">[\b]</td>
+<td><strong>b</strong>ackspace,之所以使用[]符号是避免和\b重复</td>
+</tr>
+</tbody></table>
+<h2 id="多字符"><a href="#多字符" class="headerlink" title="多字符"></a>多字符</h2><table>
+<thead>
+<tr>
+<th>匹配区间</th>
+<th align="center">正则表达式</th>
+<th>记忆方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>除了换行符之外的任何字符</td>
+<td align="center">.</td>
+<td>句号,除了句子结束符</td>
+</tr>
+<tr>
+<td>单个数字, [0-9]</td>
+<td align="center">\d</td>
+<td>digit</td>
+</tr>
+<tr>
+<td>除了[0-9]</td>
+<td align="center">\D</td>
+<td>not digit</td>
+</tr>
+<tr>
+<td>包括下划线在内的单个字符，[A-Za-z0-9_]</td>
+<td align="center">\w</td>
+<td>word</td>
+</tr>
+<tr>
+<td>非单字字符</td>
+<td align="center">\W</td>
+<td>not word</td>
+</tr>
+<tr>
+<td>匹配空白字符,包括空格、制表符、换页符和换行符</td>
+<td align="center">\s</td>
+<td>space</td>
+</tr>
+<tr>
+<td>匹配非空白字符</td>
+<td align="center">\S</td>
+<td>not space</td>
+</tr>
+</tbody></table>
+<h2 id="循环与重复"><a href="#循环与重复" class="headerlink" title="循环与重复"></a>循环与重复</h2><ol>
+<li><p>?  表示 0 | 1</p>
+</li>
+<li><p>* 表示 &gt;= 0</p>
+</li>
+<li><p>+ 表示 &gt;= 1</p>
+</li>
+</ol>
+<h2 id="特定次数"><a href="#特定次数" class="headerlink" title="特定次数"></a>特定次数</h2><ul>
+<li><p>{x}: x次</p>
+</li>
+<li><p>{min, max}： 介于min次到max次之间</p>
+</li>
+<li><p>{min, }: 至少min次</p>
+</li>
+<li><p>{0, max}： 至多max次</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>匹配规则</th>
+<th align="center">元字符</th>
+<th>联想方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0次或1次</td>
+<td align="center">?</td>
+<td>且问,此事有还无</td>
+</tr>
+<tr>
+<td>0次或无数次</td>
+<td align="center">*</td>
+<td>宇宙洪荒,辰宿列张：宇宙伊始，从无到有，最后星宿布满星空</td>
+</tr>
+<tr>
+<td>1次或无数次</td>
+<td align="center">+</td>
+<td>一加, +1</td>
+</tr>
+<tr>
+<td>特定次数</td>
+<td align="center">{x}, {min, max}</td>
+<td>可以想象成一个数轴，从一个点，到一个射线再到线段。min和max分别表示了左闭右闭区间的左界和右界</td>
+</tr>
+</tbody></table>
+<h2 id="位置边界"><a href="#位置边界" class="headerlink" title="位置边界"></a>位置边界</h2><table>
+<thead>
+<tr>
+<th>边界和标志</th>
+<th align="center">正则表达式</th>
+<th>记忆方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单词边界</td>
+<td align="center">\b</td>
+<td>boundary</td>
+</tr>
+<tr>
+<td>非单词边界</td>
+<td align="center">\B</td>
+<td>not boundary</td>
+</tr>
+<tr>
+<td>字符串开头</td>
+<td align="center">^</td>
+<td>小头尖尖那么大个</td>
+</tr>
+<tr>
+<td>字符串结尾</td>
+<td align="center">$</td>
+<td>终结者，美国科幻电影，美元符$</td>
+</tr>
+<tr>
+<td>多行模式</td>
+<td align="center">m标志</td>
+<td>multiple of lines</td>
+</tr>
+<tr>
+<td>忽略大小写</td>
+<td align="center">i标志</td>
+<td>ignore case, case-insensitive</td>
+</tr>
+<tr>
+<td>全局模式</td>
+<td align="center">g标志</td>
+<td>global</td>
+</tr>
+</tbody></table>
+<h2 id="子表达式：分组、回溯引用和逻辑处理"><a href="#子表达式：分组、回溯引用和逻辑处理" class="headerlink" title="子表达式：分组、回溯引用和逻辑处理"></a>子表达式：分组、回溯引用和逻辑处理</h2><ul>
+<li><p>分组：()</p>
+</li>
+<li><p>回溯引用（backreference）指的是模式的后面部分引用前面已经匹配到的子字符串。</p>
+</li>
+<li><p>向前查找：(?=regex)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;happy happily&quot;.replace(/happ(?=ily)/, &apos;-&apos;) == &quot;happy -ily&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>负前向查找：(?!regex)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;happy happily&quot;.replace(/happ(?!ily)/, &apos;-&apos;) == &quot;-y happily&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后向查找：(?&lt;=regex)  ！不是每种正则实现都支持后向查找。</p>
+</li>
+<li><p>负后向查找：(?&lt;!regex)</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>回溯查找</th>
+<th align="center">正则</th>
+<th>记忆方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引用</td>
+<td align="center">\0,\1,\2 和 $0, $1, $2</td>
+<td>转义+数字</td>
+</tr>
+<tr>
+<td>非捕获组</td>
+<td align="center">(?:)</td>
+<td>引用表达式(()), 本身不被消费(?),引用(:)</td>
+</tr>
+<tr>
+<td>前向查找</td>
+<td align="center">(?=)</td>
+<td>引用子表达式(())，本身不被消费(?), 正向的查找(=)</td>
+</tr>
+<tr>
+<td>前向负查找</td>
+<td align="center">(?!)</td>
+<td>引用子表达式(())，本身不被消费(?), 负向的查找(!)</td>
+</tr>
+<tr>
+<td>后向查找</td>
+<td align="center">(?&lt;=)</td>
+<td>引用子表达式(())，本身不被消费(?), 后向的(&lt;，开口往后)，正的查找(=)</td>
+</tr>
+<tr>
+<td>后向负查找</td>
+<td align="center">(?&lt;!)</td>
+<td>引用子表达式(())，本身不被消费(?), 后向的(&lt;，开口往后)，负的查找(!)</td>
+</tr>
+</tbody></table>
+<h2 id="逻辑处理"><a href="#逻辑处理" class="headerlink" title="逻辑处理"></a>逻辑处理</h2><table>
+<thead>
+<tr>
+<th>逻辑关</th>
+<th>正则元字符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>与</td>
+<td>无</td>
+</tr>
+<tr>
+<td>非</td>
+<td>[^regex]和!</td>
+</tr>
+<tr>
+<td>或</td>
+<td>|</td>
+</tr>
+</tbody></table>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src>
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci data-cs data-r data-o data-a data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
